@@ -1,0 +1,62 @@
+import type { Metadata } from "next";
+import { site } from "@/lib/site";
+import { organizationSchema } from "@/lib/schema";
+// Fonts are self-hosted from /public/fonts (see app/fonts.css) — no build-time
+// or runtime calls to a third-party CDN, which keeps the "nothing leaves your
+// device" promise honest and makes the build reproducible offline.
+import "./fonts.css";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.name} — ${site.tagline}`,
+    template: `%s · ${site.name}`,
+  },
+  description: site.description,
+  applicationName: site.name,
+  keywords: [
+    "convert audio to mp3",
+    "mp3 converter",
+    "private mp3 converter",
+    "client-side mp3 converter",
+    "wav to mp3",
+    "m4a to mp3",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    title: `${site.name} — ${site.tagline}`,
+    description: site.description,
+    url: site.url,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${site.name} — ${site.tagline}`,
+    description: site.description,
+  },
+  robots: { index: true, follow: true },
+  // Google Search Console verification. Paste the token from GSC's "HTML tag"
+  // method into GOOGLE_SITE_VERIFICATION (Vercel env). Omitted when unset.
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+        />
+        {children}
+      </body>
+    </html>
+  );
+}

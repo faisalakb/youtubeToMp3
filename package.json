@@ -1,0 +1,45 @@
+{
+  "name": "mp3bat",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The converter that never sees your files — 100% client-side audio to MP3.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "node scripts/e2e-video.mjs",
+    "icons": "node scripts/gen-icons.mjs",
+    "wordmark": "node scripts/gen-wordmark.mjs",
+    "check-env": "node scripts/check-env.mjs"
+  },
+  "dependencies": {
+    "@breezystack/lamejs": "^1.2.7",
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.45.4",
+    "next": "^14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "stripe": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "opentype.js": "^2.0.0",
+    "png-to-ico": "^3.0.1",
+    "postcss": "^8.4.39",
+    "puppeteer-core": "^23.11.1",
+    "sharp": "^0.35.1",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3",
+    "vitest": "^2.0.4",
+    "wawoff2": "^2.0.1"
+  }
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- mp3bat favicon: waveform bars spreading into a bat's wings -->
+  <rect width="120" height="120" rx="26" fill="#0b1220"/>
+  <g transform="translate(-2,2)" fill="#34d1bf">
+    <!-- left wing -->
+    <rect x="51"   y="48" width="4" height="38" rx="2"/>
+    <rect x="44.5" y="52" width="4" height="34" rx="2"/>
+    <rect x="38"   y="58" width="4" height="28" rx="2"/>
+    <rect x="31.5" y="64" width="4" height="22" rx="2"/>
+    <rect x="25"   y="72" width="4" height="14" rx="2"/>
+    <!-- right wing -->
+    <rect x="65"   y="48" width="4" height="38" rx="2"/>
+    <rect x="71.5" y="52" width="4" height="34" rx="2"/>
+    <rect x="78"   y="58" width="4" height="28" rx="2"/>
+    <rect x="84.5" y="64" width="4" height="22" rx="2"/>
+    <rect x="91"   y="72" width="4" height="14" rx="2"/>
+    <!-- body -->
+    <rect x="56.5" y="48" width="7" height="38" rx="3.5"/>
+    <!-- ears -->
+    <polygon points="57,49 53,33 60,46"/>
+    <polygon points="63,49 67,33 60,46"/>
+  </g>
+</svg>
