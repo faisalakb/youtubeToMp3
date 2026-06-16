@@ -61,6 +61,8 @@ export default function RootLayout({
         {plausibleDomain && (
           <script defer data-domain={plausibleDomain} src="https://plausible.io/js/script.js" />
         )}
+        {/* Ahrefs Web Analytics — cookieless, no consent banner needed. */}
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="lQURL+FjIA+ZvC522iBEzA" async />
       </head>
       <body>
         <script

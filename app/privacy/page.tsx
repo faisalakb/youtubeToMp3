@@ -52,9 +52,10 @@ export default function PrivacyPage() {
 
         <h2>Analytics</h2>
         <p>
-          For aggregate traffic we use cookieless, privacy-first analytics (Plausible). It sets no
-          cookies, collects no personal data, and never sees the contents of your files (which we
-          never receive in the first place) — only anonymous, aggregate page-view counts. That&apos;s
+          For aggregate traffic we use cookieless, privacy-first analytics (Plausible and Ahrefs Web
+          Analytics). They set no cookies, write nothing to your device, collect no personal data,
+          and never see the contents of your files (which we never receive in the first place) — only
+          anonymous, aggregate measurements like page views and country-level location. That&apos;s
           also why {site.name} shows no cookie-consent banner: there are no tracking cookies to
           consent to.
         </p>
