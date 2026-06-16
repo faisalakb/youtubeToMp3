@@ -38,10 +38,15 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
   robots: { index: true, follow: true },
-  // Google Search Console verification. Paste the token from GSC's "HTML tag"
-  // method into GOOGLE_SITE_VERIFICATION (Vercel env). Omitted when unset.
+  // Site verification. Google's token comes from GSC's "HTML tag" method via the
+  // GOOGLE_SITE_VERIFICATION env (omitted when unset). The Ahrefs token is a
+  // public verification string, safe to hardcode so the check stays reliable.
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
+    other: {
+      "ahrefs-site-verification":
+        "0b88e19baa5f6826fc417284b936f5cb9591ffdd7aa57348f68e71cdf3ea956f",
+    },
   },
 };
 
