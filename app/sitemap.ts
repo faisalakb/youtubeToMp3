@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/is-youtube-to-mp3-legal", priority: 0.8, freq: "monthly" },
     { path: "/how-it-works", priority: 0.6, freq: "monthly" },
     { path: "/privacy", priority: 0.4, freq: "monthly" },
+    { path: "/disclosure", priority: 0.3, freq: "monthly" },
   ];
 
   const formatPages = FORMATS.map((f) => ({

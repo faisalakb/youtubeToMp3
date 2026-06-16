@@ -29,11 +29,13 @@ export const metadata: Metadata = {
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
     url: site.url,
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: `${site.name} — ${site.tagline}` }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
+    images: ["/og.png"],
   },
   robots: { index: true, follow: true },
   // Google Search Console verification. Paste the token from GSC's "HTML tag"
@@ -43,6 +45,8 @@ export const metadata: Metadata = {
   },
 };
 
+const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+
 export default function RootLayout({
   children,
 }: {
@@ -50,6 +54,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Cookieless, privacy-first analytics — no cookies, no consent banner,
+            no personal data. Loads only when NEXT_PUBLIC_PLAUSIBLE_DOMAIN is set,
+            so it stays consistent with the "nothing leaves your device" promise. */}
+        {plausibleDomain && (
+          <script defer data-domain={plausibleDomain} src="https://plausible.io/js/script.js" />
+        )}
+      </head>
       <body>
         <script
           type="application/ld+json"

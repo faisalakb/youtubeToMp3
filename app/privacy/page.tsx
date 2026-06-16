@@ -52,9 +52,17 @@ export default function PrivacyPage() {
 
         <h2>Analytics</h2>
         <p>
-          If privacy-respecting, aggregate analytics are added in the future to understand overall
-          traffic, they will never include the contents of your files (which we never receive) and
-          this page will be updated to say exactly what is measured.
+          For aggregate traffic we use cookieless, privacy-first analytics (Plausible). It sets no
+          cookies, collects no personal data, and never sees the contents of your files (which we
+          never receive in the first place) — only anonymous, aggregate page-view counts. That&apos;s
+          also why {site.name} shows no cookie-consent banner: there are no tracking cookies to
+          consent to.
+        </p>
+        <h2>Affiliate links</h2>
+        <p>
+          Some outbound links are affiliate links, which can earn us a commission at no extra cost to
+          you. They don&apos;t affect this privacy promise. See the{" "}
+          <Link href="/disclosure">affiliate disclosure</Link> for details.
         </p>
 
         <h2>Changes</h2>

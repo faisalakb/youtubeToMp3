@@ -11,7 +11,8 @@ export default function Footer() {
       <Link href="/pricing">pricing</Link> ·{" "}
       <Link href="/how-it-works">how it works</Link> ·{" "}
       <Link href="/is-youtube-to-mp3-legal">is this legal?</Link> ·{" "}
-      <Link href="/privacy">privacy</Link>
+      <Link href="/privacy">privacy</Link> ·{" "}
+      <Link href="/disclosure">disclosure</Link>
     </footer>
   );
 }

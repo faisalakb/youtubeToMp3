@@ -13,6 +13,7 @@
     "test:e2e": "node scripts/e2e-video.mjs",
     "icons": "node scripts/gen-icons.mjs",
     "wordmark": "node scripts/gen-wordmark.mjs",
+    "og": "node scripts/gen-og.mjs",
     "check-env": "node scripts/check-env.mjs"
   },
   "dependencies": {
