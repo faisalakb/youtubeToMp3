@@ -2,6 +2,7 @@ import Link from "next/link";
 import Brand from "@/components/Brand";
 import Footer from "@/components/Footer";
 import { site } from "@/lib/site";
+import { DEVICES } from "@/lib/devices";
 import {
   howToSchema,
   faqPageSchema,
@@ -92,6 +93,16 @@ export default function HowToGuide({
           See <Link href="/how-it-works">how on-device conversion works</Link>, pick a quality in the{" "}
           <Link href="/guides/320-kbps-mp3">bitrate guide</Link>, or browse all{" "}
           <Link href="/convert">format converters</Link>.
+        </p>
+        <p>
+          More device guides:{" "}
+          {DEVICES.filter((dev) => `/guides/${dev.slug}` !== path).map((dev, i, arr) => (
+            <span key={dev.slug}>
+              <Link href={`/guides/${dev.slug}`}>MP3 on {dev.os}</Link>
+              {i < arr.length - 1 ? " · " : ""}
+            </span>
+          ))}
+          .
         </p>
       </article>
 

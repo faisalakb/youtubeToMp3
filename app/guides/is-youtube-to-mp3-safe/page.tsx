@@ -7,7 +7,7 @@ import type { Faq } from "@/lib/schema";
 
 const TITLE = "Is YouTube to MP3 Safe? The Honest Answer (2026)";
 const DESCRIPTION =
-  "Are YouTube to MP3 converters safe? The risk isn't the MP3 — it's the ripper sites. Here's how to spot the dangerous ones and the genuinely safe way to convert.";
+  "Are YouTube to MP3 converters safe? The real risk isn't the file — it's the ripper sites. How to spot the dangerous ones and convert safely.";
 const PATH = "/guides/is-youtube-to-mp3-safe";
 
 export const metadata: Metadata = {

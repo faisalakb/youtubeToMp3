@@ -19,7 +19,7 @@ export const DEVICES: Device[] = [
   {
     slug: "mp3-on-windows",
     os: "Windows",
-    title: "How to Convert Audio to MP3 on Windows (No Software to Install)",
+    title: "How to Convert Audio to MP3 on Windows",
     description:
       "Convert WAV, M4A, FLAC and more to MP3 on Windows right in your browser — no download, no upload, no sign-up.",
     intro:
@@ -47,7 +47,7 @@ export const DEVICES: Device[] = [
   {
     slug: "mp3-on-mac",
     os: "Mac",
-    title: "How to Convert Audio to MP3 on a Mac (Browser-Based, Private)",
+    title: "How to Convert Audio to MP3 on a Mac",
     description:
       "Convert M4A, WAV, FLAC and more to MP3 on macOS without installing anything — runs in Safari or Chrome, entirely on your Mac.",
     intro:
@@ -75,7 +75,7 @@ export const DEVICES: Device[] = [
   {
     slug: "mp3-on-iphone",
     os: "iPhone",
-    title: "How to Convert Audio to MP3 on iPhone (Save to Files)",
+    title: "How to Convert Audio to MP3 on iPhone",
     description:
       "Convert audio to MP3 on an iPhone using Safari and the Files app — no app to install, and the file stays on your phone.",
     intro:
@@ -103,7 +103,7 @@ export const DEVICES: Device[] = [
   {
     slug: "mp3-on-android",
     os: "Android",
-    title: "How to Convert Audio to MP3 on Android (No App Needed)",
+    title: "How to Convert Audio to MP3 on Android",
     description:
       "Convert audio to MP3 on Android straight from Chrome — no app, no upload, and the file stays on your phone.",
     intro:

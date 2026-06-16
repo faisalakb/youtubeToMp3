@@ -7,7 +7,7 @@ import { howToSchema, type Faq, type HowToStep } from "@/lib/schema";
 
 const TITLE = "How to Convert YouTube to MP3 Legally (2026)";
 const DESCRIPTION =
-  "A plain, step-by-step guide to getting an MP3 from YouTube the legal way — using audio you're entitled to and a private converter that never uploads your file.";
+  "A step-by-step guide to getting an MP3 from YouTube the legal way — using audio you're entitled to and a private, no-upload converter.";
 const PATH = "/guides/how-to-convert-youtube-to-mp3-legally";
 
 export const metadata: Metadata = {

@@ -15,8 +15,11 @@ export type Format = {
   kind: "audio" | "video";
   /** Human name of the source format. */
   name: string;
-  /** Why this conversion is commonly wanted (1–2 sentences). */
+  /** Why this conversion is commonly wanted (1–2 sentences). Visible body copy. */
   why: string;
+  /** Short, unique reason for the meta description tail (keep it brief so the
+   *  full description stays under ~155 chars). */
+  blurb: string;
   /** A short, format-specific technical note shown under the converter. */
   note: string;
   /** What the format is, in plain English (one paragraph). */
@@ -31,6 +34,7 @@ export const FORMATS: Format[] = [
     kind: "audio",
     name: "WAV",
     why: "WAV files are uncompressed, so they're large — often ten times the size of an MP3. Converting to MP3 shrinks them for phones, email, and players while keeping the audio that matters.",
+    blurb: "Shrink large uncompressed WAV files for phones, email, and players.",
     note: "WAV is lossless and uncompressed, so the MP3 will be dramatically smaller. 320 kbps keeps the quality difference inaudible to most listeners; 192 kbps is the sweet spot for size.",
     about:
       "WAV (Waveform Audio File Format) stores raw, uncompressed PCM audio. It's the studio-standard container for recordings and exports because nothing is thrown away — which is also why the files are so big.",
@@ -58,6 +62,7 @@ export const FORMATS: Format[] = [
     kind: "audio",
     name: "M4A",
     why: "M4A is what iPhones, Apple Music, and Voice Memos produce, but some older players, car stereos, and apps only accept MP3. Converting makes the file play everywhere.",
+    blurb: "Make iPhone, Apple Music, and Voice Memo audio play on any device.",
     note: "M4A usually holds AAC audio, which is already compressed. Re-encoding to MP3 is a lossy-to-lossy step, so choose 256–320 kbps to avoid stacking up audible artifacts.",
     about:
       "M4A is an MPEG-4 audio container, typically holding AAC (and sometimes Apple Lossless). It's the default for Apple devices and many download stores, offering good quality at small sizes — but narrower device support than MP3.",
@@ -85,6 +90,7 @@ export const FORMATS: Format[] = [
     kind: "audio",
     name: "AAC",
     why: "AAC delivers great quality for its size and is everywhere in streaming and Apple's ecosystem — but MP3 remains the safest format for universal playback. Convert when you need something that plays anywhere.",
+    blurb: "Turn streaming and Apple-ecosystem audio into a file that plays anywhere.",
     note: "AAC is a lossy codec, so converting to MP3 is lossy-to-lossy. Pick 256–320 kbps to keep the result transparent; dropping to 128 kbps twice over is where quality starts to show.",
     about:
       "AAC (Advanced Audio Coding) is the successor to MP3, generally sounding better at the same bitrate. It's the default for YouTube, Apple Music, and most streaming — but MP3 still wins on raw device compatibility.",
@@ -107,6 +113,7 @@ export const FORMATS: Format[] = [
     kind: "audio",
     name: "OGG Vorbis",
     why: "OGG (Vorbis) is open and efficient, common in games and on Linux, but many mainstream apps and devices don't support it. Converting to MP3 makes those files play on practically anything.",
+    blurb: "Make open-format game and Linux audio play on practically anything.",
     note: "OGG Vorbis is a lossy codec, so this is a lossy-to-lossy conversion. Use 256–320 kbps so the MP3 doesn't audibly degrade relative to the source.",
     about:
       "OGG is an open, royalty-free container most often holding Vorbis audio. It's popular in open-source software and game audio, but consumer device support lags well behind MP3 — the usual reason for converting.",
@@ -129,6 +136,7 @@ export const FORMATS: Format[] = [
     kind: "audio",
     name: "FLAC",
     why: "FLAC is lossless, so it preserves every detail — and takes a lot of space. Converting to MP3 frees up storage and fits more music on phones and players, with a quality drop most people can't hear at high bitrates.",
+    blurb: "Shrink lossless audio to fit more music on phones and players.",
     note: "FLAC is lossless, so this is your one clean encode from a perfect source. Use 320 kbps to keep the MP3 as close to the original as a lossy format allows.",
     about:
       "FLAC (Free Lossless Audio Codec) compresses audio without discarding any data — bit-for-bit identical to the source when decoded. Audiophiles love it for archiving; the trade-off is file size, which is why people convert to MP3 for everyday listening.",
@@ -163,6 +171,7 @@ FORMATS.push(
     kind: "video",
     name: "MP4",
     why: "MP4 is the most common video format, and often all you want from it is the audio — a song, a lecture, a podcast. mp3bat extracts the audio track to MP3 right in your browser, no upload.",
+    blurb: "Pull the audio from any MP4 video — a song, lecture, or podcast.",
     note: videoNote,
     about:
       "MP4 (MPEG-4 Part 14) is the dominant container for video on phones, cameras, and the web, usually pairing H.264/H.265 video with AAC audio. Converting to MP3 keeps just the audio in a universally playable form.",
@@ -190,6 +199,7 @@ FORMATS.push(
     kind: "video",
     name: "MOV",
     why: "MOV is Apple's QuickTime video format, straight off iPhones and Macs. When you only need the sound, mp3bat pulls the audio track out to MP3 — privately, in your browser.",
+    blurb: "Extract the audio from Apple QuickTime and iPhone videos.",
     note: videoNote,
     about:
       "MOV is Apple's QuickTime container, common for screen recordings and iPhone video. It's well supported on Apple devices but less so elsewhere, so extracting the audio to MP3 makes it play anywhere.",
@@ -212,6 +222,7 @@ FORMATS.push(
     kind: "video",
     name: "MKV",
     why: "MKV (Matroska) is a flexible video container popular for high-quality rips and recordings. mp3bat extracts its audio track to MP3 in your browser, with nothing uploaded.",
+    blurb: "Extract the audio track from Matroska (MKV) video files.",
     note: videoNote,
     about:
       "MKV (Matroska) is an open container that can hold many video, audio, and subtitle tracks. It's powerful but unevenly supported by players — extracting the audio to MP3 gives you something that plays everywhere.",
@@ -234,6 +245,7 @@ FORMATS.push(
     kind: "video",
     name: "WEBM",
     why: "WEBM is the open web video format, common for downloads and recordings. mp3bat extracts its audio to MP3 entirely in your browser — no upload, no sign-up.",
+    blurb: "Extract the audio from open-web WEBM video files.",
     note: videoNote,
     about:
       "WEBM is an open, royalty-free container (usually VP8/VP9 video with Vorbis or Opus audio) built for the web. Extracting the audio to MP3 makes it playable on devices and apps that don't handle WEBM.",

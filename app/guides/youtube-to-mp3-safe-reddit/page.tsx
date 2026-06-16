@@ -7,7 +7,7 @@ import type { Faq } from "@/lib/schema";
 
 const TITLE = "Safe YouTube to MP3, According to Reddit (2026)";
 const DESCRIPTION =
-  "What Reddit actually recommends for safe YouTube to MP3 conversion — the common advice, the tools that get suggested, the warnings, and where a private browser converter fits.";
+  "What Reddit recommends for safe YouTube to MP3 conversion — the common advice, the tools suggested, the warnings, and where a private browser converter fits.";
 const PATH = "/guides/youtube-to-mp3-safe-reddit";
 
 export const metadata: Metadata = {

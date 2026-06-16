@@ -7,7 +7,7 @@ import { FORMATS } from "@/lib/formats";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Audio format converters — every conversion runs in your browser",
+  title: "Convert any audio format to MP3 in your browser",
   description:
     "Convert WAV, M4A, AAC, OGG, and FLAC to MP3 entirely on your device. Free, private, no upload, no sign-up.",
   alternates: { canonical: "/convert" },

@@ -18,7 +18,7 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   const f = getFormat(params.format);
   if (!f) return {};
   const title = `${f.ext} to MP3 — convert in your browser, no upload`;
-  const description = `Convert ${f.name} to MP3 entirely on your device. Free, private, no sign-up. ${f.why}`;
+  const description = `Convert ${f.ext} to MP3 free in your browser — no upload, no sign-up. ${f.blurb}`;
   const path = `/convert/${f.slug}`;
   return {
     title,

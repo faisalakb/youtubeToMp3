@@ -9,7 +9,7 @@ export const site = {
   // NEXT_PUBLIC_SITE_URL if you ever deploy to a preview/staging host.
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://mp3bat.com",
   description:
-    "Convert audio to MP3 entirely in your browser. Your file is never uploaded, so there's nothing for us to store, leak, or sell. No ads on your download, no sign-up.",
+    "Convert audio to MP3 entirely in your browser. Your file is never uploaded — nothing to store, leak, or sell. No ads, no sign-up.",
   twitter: "@mp3bat",
   // Affiliate links. mp3bat doesn't rip from URLs, so we honestly point people
   // who need that to a reputable paid desktop app and earn a referral.

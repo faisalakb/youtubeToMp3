@@ -11,9 +11,9 @@ import {
   type Faq,
 } from "@/lib/schema";
 
-const TITLE = "Is Converting YouTube to MP3 Legal? A Plain-English Answer (2026)";
+const TITLE = "Is Converting YouTube to MP3 Legal? (2026)";
 const DESCRIPTION =
-  "Whether converting YouTube to MP3 is legal depends on what you convert and whether you have the right to — not on the tool. Here's the honest breakdown, with the safe ways to do it.";
+  "Whether converting YouTube to MP3 is legal depends on what you convert and your rights to it — not the tool. The honest breakdown, plus the safe ways to do it.";
 const PATH = "/is-youtube-to-mp3-legal";
 
 export const metadata: Metadata = {

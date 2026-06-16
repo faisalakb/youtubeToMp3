@@ -4,7 +4,7 @@ import ArticleGuide from "@/components/ArticleGuide";
 import { site } from "@/lib/site";
 import type { Faq } from "@/lib/schema";
 
-const TITLE = "Lossless vs Lossy Audio: What's the Difference? (Plain English)";
+const TITLE = "Lossless vs Lossy Audio: What's the Difference?";
 const DESCRIPTION =
   "Lossless (FLAC, WAV) vs lossy (MP3, AAC, OGG) audio explained simply — what each is for, when the difference matters, and how it affects converting to MP3.";
 const PATH = "/guides/lossless-vs-lossy";
