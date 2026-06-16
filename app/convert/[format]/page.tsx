@@ -6,11 +6,7 @@ import Footer from "@/components/Footer";
 import Converter from "@/components/Converter";
 import { site } from "@/lib/site";
 import { FORMATS, getFormat } from "@/lib/formats";
-import {
-  webApplicationSchema,
-  faqPageSchema,
-  breadcrumbSchema,
-} from "@/lib/schema";
+import { faqPageSchema, breadcrumbSchema } from "@/lib/schema";
 
 type Params = { format: string };
 
@@ -40,10 +36,6 @@ export default function FormatPage({ params }: { params: Params }) {
 
   return (
     <main className="wrap">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationSchema()) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(f.faqs)) }}

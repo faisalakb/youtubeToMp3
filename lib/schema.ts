@@ -15,24 +15,11 @@ export function organizationSchema() {
   };
 }
 
-export function webApplicationSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: site.name,
-    url: site.url,
-    applicationCategory: "MultimediaApplication",
-    operatingSystem: "Any (runs in the browser)",
-    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-    description: site.description,
-    featureList: [
-      "Client-side audio to MP3 conversion",
-      "No upload — files never leave the device",
-      "Selectable bitrate up to 320 kbps",
-      "No account required",
-    ],
-  };
-}
+// Note: a WebApplication/SoftwareApplication schema was intentionally removed.
+// Google's SoftwareApplication rich result requires `aggregateRating` or
+// `review`, and mp3bat has no genuine ratings to cite — fabricating them would
+// violate Google's guidelines and the product's honesty. Re-add it only once
+// real reviews exist.
 
 export type Faq = { question: string; answer: string };
 

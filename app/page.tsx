@@ -6,7 +6,7 @@ import Converter from "@/components/Converter";
 import HowToReveal from "@/components/HowToReveal";
 import SafeYoutube from "@/components/SafeYoutube";
 import { site } from "@/lib/site";
-import { webApplicationSchema, faqPageSchema, type Faq } from "@/lib/schema";
+import { faqPageSchema, type Faq } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: `${site.name} — convert audio to MP3 without uploading a thing`,
@@ -40,10 +40,6 @@ const faqs: Faq[] = [
 export default function HomePage() {
   return (
     <main className="wrap">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationSchema()) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema(faqs)) }}
